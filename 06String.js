@@ -6,6 +6,8 @@ const repo = 9
 
 console.log(`Hello my name is Md ${name} and my github repo count is ${repo}`)
 
+// *********************** Notes ***********************
+
 // This line prints a message on the console using a Template Literal.
 // A Template Literal is a modern way to create strings in JavaScript.
 // It uses backticks ( ) instead of single (') or double (") quotes.
@@ -18,7 +20,22 @@ console.log(`Hello my name is Md ${name} and my github repo count is ${repo}`)
 // ${} is used to insert variables or expressions into a string.
 // It is more readable than using the + operator for string concatenation.
 
+
+
 const gameName = new String(`kaifbyte.com`)
+
+// *********************** Notes ***********************
+
+// new String() → Creates a String Object.
+// "kaifbyte.com" → The string value stored inside the object.
+
+// Why use new String()?
+// A String object provides built-in properties and methods such as:
+// gameName.length
+// gameName.toUpperCase()
+// gameName.charAt(2)
+// gameName.indexOf("b")
+
 console.log(gameName) 
 console.log(gameName[2])
 
