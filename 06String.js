@@ -44,3 +44,26 @@ console.log(gameName.toUpperCase())
 
 console.log(gameName.charAt(2))
 console.log(gameName.indexOf("b"))
+
+const newString = gameName.substring(0, 4)
+console.log(newString)
+
+const anotherString = gameName.slice(-10, 4)
+console.log(anotherString)
+
+const anotherStringOne = "  kaif    "
+console.log(anotherStringOne)
+console.log(anotherStringOne.trim())
+
+const url = "https://kaifahan.com/md%20kaif"
+console.log(url.replace('%20', ''))
+console.log(url.includes('kaif'))
+
+
+
+// To check all the string method on browser we have to create new String value then call the variable for eg
+// const gameName = new String('kaif')
+// type -> gameName <- in your browser and you get all string methods.
+// length.
+// substring. 
+// etc
