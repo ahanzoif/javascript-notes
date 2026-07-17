@@ -53,17 +53,33 @@ console.log(anotherString)
 
 const anotherStringOne = "  kaif    "
 console.log(anotherStringOne)
-console.log(anotherStringOne.trim())
+console.log(anotherStringOne.trim())  // removes extra white spaces.
 
 const url = "https://kaifahan.com/md%20kaif"
 console.log(url.replace('%20', ''))
 console.log(url.includes('kaif'))
 
+// ************** Important **************
 
+// To explore all String methods in the browser console,
+// create a String object using the `new String()` constructor.
 
-// To check all the string method on browser we have to create new String value then call the variable for eg
-// const gameName = new String('kaif')
-// type -> gameName <- in your browser and you get all string methods.
-// length.
-// substring. 
-// etc
+// Example:
+const gameName = new String("kaif");
+
+// Now type:
+// gameName
+// in the browser console and expand the object.
+// You'll see all the available String properties and methods.
+
+// Common String methods:
+// gameName.length
+// gameName.substring()
+// gameName.slice()
+// gameName.toUpperCase()
+// gameName.toLowerCase()
+// gameName.charAt()
+// gameName.indexOf()
+// gameName.includes()
+// gameName.replace()
+// gameName.split()
