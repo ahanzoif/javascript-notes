@@ -53,4 +53,8 @@ console.log(hundred.toLocaleString('en-IN'))
 
 // *************** Maths ***************
 
-console.log(Math)
+console.log(Math);
+console.log(Math.abs(-4)) // Math.abs gives Absolute Value
+console.log(Math.round(4.3))  // Math.round conver values in round figure
+console.log(Math.ceil(4.2))  // Math.ceil is use to get higher round value
+console.log(Math.floor(4.9)) // Math.floor is use to get lower round value
