@@ -60,3 +60,8 @@ console.log(Math.ceil(4.2))  // Math.ceil is use to get higher round value
 console.log(Math.floor(4.9)) // Math.floor is use to get lower round value
 console.log(Math.min(4,3,5,2,0,1)) // Math.min is use to find min value
 console.log(Math.max(7,2,45,78,9475,47446)) // Math.max is use to find max value
+
+// *************** Important ***************
+
+console.log(Math.random())  // Math.random value always lie between 0 & 1
+console.log((Math.random()*10) + 1) // Use to  get value between 1 to 10 and avoid 0
