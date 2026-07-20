@@ -54,10 +54,61 @@ let myCreatedDate = new Date("07-20-2026")
 console.log(myCreatedDate.toLocaleString())
 
 let myTimeStamp = Date.now()
+//Returns the current time as milliseconds since 1 January 1970 UTC (the Unix Epoch).
+//Example: 20/7/2026, 12:00:00 AM
+
 console.log(myTimeStamp)
+//Returns the timestamp of that date.
+//Example: 1784505600000
+
+//Why use timestamps?
+
+// Suppose you want to know which post is newer.
+
+// Instead of comparing dates:
+// 20 July
+// 19 July
+// compare 1784505600000
+        // 1784419200000
+//The bigger timestamp is the newer date, Very fast and efficient.
+
 console.log(myCreatedDate.getTime())
+
 
 let newDate = new Date()
 console.log(newDate)
+
 console.log(newDate.getMonth())
+//Output = 6
+//Today is July.
+// Why not 7?
+// Because JavaScript months start from 0.
+
+// | Month     | Value |
+// | --------- | ----: |
+// | January   |     0 |
+// | February  |     1 |
+// | March     |     2 |
+// | April     |     3 |
+// | May       |     4 |
+// | June      |     5 |
+// | July      |     6 |
+// | August    |     7 |
+// | September |     8 |
+// | October   |     9 |
+// | November  |    10 |
+// | December  |    11 |
+
+
 console.log(newDate.getDay())
+//Returns the day of the week.
+
+// | Day       | Value |
+// | --------- | ----: |
+// | Sunday    |     0 |
+// | Monday    |     1 |
+// | Tuesday   |     2 |
+// | Wednesday |     3 |
+// | Thursday  |     4 |
+// | Friday    |     5 |
+// | Saturday  |     6 |
