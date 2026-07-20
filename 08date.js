@@ -12,3 +12,5 @@ console.log(myDate.toLocaleTimeString())
 console.log(myDate.toLocaleString())
 
 console.log(myDate.toTimeString())
+
+console.log(myDate.toUTCString())
