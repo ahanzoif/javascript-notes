@@ -8,4 +8,10 @@ const dc = ["Batman", "Superman", "Wonder Woman"]
 const comics = marvel.concat(dc)
 //.conca -> Combines two or more arrays. 
 // This method returns a new array without modifying any existing arrays.
-console.log(comics)
+// console.log(comics)
+
+const heros = [...marvel, ...dc]
+console.log(heros)
+//Spread operator(...), this operator is one of the most
+//commonly used features in moder JS, insted of concat operator
+//The ... takes each element out of the array and places it into the new array.
