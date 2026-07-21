@@ -25,6 +25,21 @@ const myArray = [0, 2, 4, 5, 6, 8]
 // console.log(myArray.indexOf(2))
 // console.log(myArray)
 
-const newArray = myArray.join()
-console.log(typeof newArray)
-console.log(newArray)
+// const newArray = myArray.join()
+// console.log(typeof newArray)
+// console.log(newArray)
+
+
+//********************* Array's Slice and Splice *********************
+
+console.log("A", myArray)
+
+const myNewArray = myArray.slice(1,3)
+console.log(myNewArray)
+
+console.log("B", myArray)
+
+const myNewArray2 =myArray.splice(1,3)
+console.log(myNewArray2)
+
+console.log("C", myArray)
