@@ -24,13 +24,13 @@ const JSuser = {
 
 // console.log(JSuser)
 
-console.log(JSuser.email);
-console.log(JSuser["email"]);
-console.log(JSuser["full name"]);
-console.log(JSuser[mySym]);
+// console.log(JSuser.email);
+// console.log(JSuser["email"]);
+// console.log(JSuser["full name"]);
+// console.log(JSuser[mySym]);
 
 JSuser.email = "kaif@bytebuster.com";
-Object.freeze(JSuser);
+// Object.freeze(JSuser);
 // Object.freeze() makes the object immutable.
 // That means you cannot:
 // Add new properties
@@ -39,4 +39,21 @@ Object.freeze(JSuser);
 
 JSuser.email = "kaif@microsoft.com";
 //This line will not change the value because the object has already been frozen.
-console.log(JSuser);
+// console.log(JSuser);
+
+JSuser.greeting = function() //Adding a Function to an Object
+{
+    console.log("Hello Kaif")
+}
+
+JSuser.greetingTwo = function()
+{
+    console.log(`Hello JS User, ${this["full name"]}`)
+}
+
+console.log(JSuser.greeting())
+console.log(JSuser.greetingTwo())
+
+//Inside an object's method, this refers to the object
+// that called the method, allowing you to access its properties 
+// and other methods using this.property or this.method().
