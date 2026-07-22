@@ -1,28 +1,42 @@
 // Object.create -> Constructor Method (Singleton)
+//Object.create is another way to create objects in JavaScript.
 
-//Object Literals 
+//Object Literals
 
-const mySym = Symbol("key1")
+// Object Stands for key-value pairs
+
+const mySym = Symbol("key1"); // syntax of Symbol declration
+//A Symbol is a unique data type in JavaScript.
 
 const JSuser = {
-    name:  "kaif",
-    age:  22,
-    [mySym]: "mykey1",
-    "full name": "Md Kaif",
-    location: "Hajipur",
-    email: "kaif@google.com",
-    isLoogedIn: false,
-    lastLoginDays: ["Friday", "Saturday"]
-} // -> object
+  name: "kaif",
+  //key   //value
+
+  age: 22,
+  [mySym]: "mykey1", // this is the syntax of symbol to declare in any Object
+
+  "full name": "Md Kaif",
+  location: "Hajipur",
+  email: "kaif@google.com",
+  isLoogedIn: false,
+  lastLoginDays: ["Friday", "Saturday"],
+}; // -> this is the syntax to declare any object in JS
 
 // console.log(JSuser)
 
-console.log(JSuser.email)
-console.log(JSuser["email"])
-console.log(JSuser["full name"])
-console.log(JSuser[mySym])
+console.log(JSuser.email);
+console.log(JSuser["email"]);
+console.log(JSuser["full name"]);
+console.log(JSuser[mySym]);
 
-JSuser.email = "kaif@bytebuster.com"
-Object.freeze(JSuser)
-JSuser.email = "kaif@microsoft.com"
-console.log(JSuser)
+JSuser.email = "kaif@bytebuster.com";
+Object.freeze(JSuser);
+// Object.freeze() makes the object immutable.
+// That means you cannot:
+// Add new properties
+// Update existing properties
+// Delete properties
+
+JSuser.email = "kaif@microsoft.com";
+//This line will not change the value because the object has already been frozen.
+console.log(JSuser);
