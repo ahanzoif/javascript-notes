@@ -19,3 +19,16 @@ console.log(studentName);
 const { studentName: name } = Collegeprofile;
 console.log(name);
 //this syntax is used to short the name of variables.
+
+// JSON API
+
+// {
+//     "name": "kaif",
+//     "branch": "cse",
+//     "cource": "B.Tech"
+// }
+//JSON API structure in form of Object.
+//In JSON API keys and values both are String.
+
+[{}, {}, {}];
+//Sometime JSON API are in format of Array
