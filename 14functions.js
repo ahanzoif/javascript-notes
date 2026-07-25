@@ -1,3 +1,9 @@
+function xyz() {}
+// this is the syntax to declare function
+//xyz is function name,variable.
+//() in parenthesis our parameters are store.
+//{} in curly braces, we write the code.
+
 function name() {
   console.log("K");
   console.log("A");
@@ -25,4 +31,7 @@ function userMsg(userName) {
   return `${userName} just logged in`;
 }
 console.log(userMsg("Md Kaif"));
+//with attributes
+
 console.log(userMsg(""));
+//without attributes
