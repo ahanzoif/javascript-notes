@@ -31,3 +31,6 @@ console.log(
 // while let and const have block scope.
 
 // A block is anything inside { }.
+
+
+
