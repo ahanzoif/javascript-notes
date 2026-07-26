@@ -9,18 +9,18 @@ if (true) {
   const b = 20;
   // var c = 40
   console.log(
-    "Hey, I'm Local Scope",
+    "Hi! I'm Local Scope",
     b,
-    "I only use in my block, out of my block you never access me",
+    "I live only inside this block,  You cannot access me outside of it.",
   );
 }
 
 // console.log("Outer a: ", a);
 console.log(
-  "Hey there!",
-  "I'm",
+  "Hello!",
+  "I'm Global Scope",
   b,
-  "and I'm Global Scope, we can use me any block of code.",
+  "You can access me from anywhere in the program.",
 );
 
 // console.log("Var c: ", c);
