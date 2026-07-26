@@ -1,3 +1,5 @@
+// ********************** Closure Scope **********************
+
 function one() {
   const username = "kaif";
 
