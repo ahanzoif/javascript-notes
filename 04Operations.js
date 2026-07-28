@@ -18,6 +18,3 @@ let str1 = "Hello ";
 let str2 = "Kaif";
 let str3 = str1 + str2; // + acts as a concatenation operator for strings.
 console.log(str3);
-
-
-
