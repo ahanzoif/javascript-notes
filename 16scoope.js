@@ -23,3 +23,14 @@ if (true) {
   //   console.log(website);  -> gives us error because website exist in local scope and we access it out of the their block
 }
 // console.log(username); -> it also give the error because of the scope in js
+
+
+function clg() {
+  const clgName = "AIMT"
+  function cource() {
+    const department = "CSE"
+    console.log(department);
+  }
+  cource()
+}
+clg()
