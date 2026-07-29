@@ -24,13 +24,12 @@ if (true) {
 }
 // console.log(username); -> it also give the error because of the scope in js
 
-
 function clg() {
-  const clgName = "AIMT"
+  const clgName = "AIMT";
   function cource() {
-    const department = "CSE"
+    const department = "CSE";
     console.log(department);
   }
-  cource()
+  cource();
 }
-clg()
+clg();
