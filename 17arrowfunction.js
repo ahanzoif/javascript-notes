@@ -40,3 +40,4 @@ const syntax = () => {
 // Arrow Function
 // Does not have its own this.
 // Uses (borrows) the this from its parent (outer scope).
+// Arrow functions do not have their own this; they inherit this from the surrounding scope.
