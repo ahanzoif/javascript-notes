@@ -29,6 +29,14 @@ check()
 // this works in object not in a function
 
 const syntax = () => {
-    let name = "kaif"
+    let name = "kaif"       //Arrow Function Syntax
     console.log(name);
 }
+
+// Normal Function
+// Has its own this.
+// this depends on how the function is called.
+
+// Arrow Function
+// Does not have its own this.
+// Uses (borrows) the this from its parent (outer scope).
