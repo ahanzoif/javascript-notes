@@ -47,4 +47,5 @@ const prograLanguage = ["js", "rb", "python", "cpp", "java"]
 for (const key in prograLanguage ) {
     console.log(prograLanguage[key]);
 }
-    
+
+//to get array values in forin loop we have to write object name and its key ->(object[key])
