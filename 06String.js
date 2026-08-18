@@ -16,7 +16,7 @@ console.log(`Hello my name is Md ${name} and my github repo count is ${repo}`)
 // ${} → Used to insert variables or expressions into a string.
 
 // Template Literal is introduced in ES6 (ECMAScript 2015).
-// It uses backticks ( ).
+// It uses backticks ( ` ` ).
 // ${} is used to insert variables or expressions into a string.
 // It is more readable than using the + operator for string concatenation.
 
