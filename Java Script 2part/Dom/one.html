@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .nerd{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="nerd">
+    <div >
+        <h1 id="title" class="heading">
+        Study of DOM<span style="display: none;">byte buster</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+        <p>DOM = Document Object Model</p>
+
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+    </div>
+</body>
+</html>
+
+<!-- document.getElementById('firstHeading').innerHTML = "<h1>Byte Buster</h1>"
+with the help of this syntax, we can manupliate the webpage. -->
+
+<!-- *************Notes*************
+example.innerText -> give the on the basis of visible content on display
+example.textContent -> it gives the all content (the content is hide in span, etc) output
+example.innerHTML -> it gives the all Html value    Study of DOM<span style="display: none;">byte buster</span>' -->
+
+<!-- document.querySelector -> it  provide us only first value of attributes
+document.querySelector('h2') -->
+
+<!-- To use for each loop and other any operation in NodeList or HTML collection
+ we have to use "Array.from()"" method -->
