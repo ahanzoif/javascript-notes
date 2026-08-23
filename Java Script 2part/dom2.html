@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <ul class="language">
+        <li>Java Script</li>
+    </ul>    
+</body>
+<script>
+    function addLanguage(LangName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${LangName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("C++")
+    addLanguage("Java")
+    addLanguage("Python")
+
+    // Optimal Approach
+
+    function addOptiLang(LangName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(LangName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("golang")
+
+</script>
+</html>
