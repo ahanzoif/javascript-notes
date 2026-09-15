@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+ 
+    <!--in JS all the events run in sequentialy,
+    there are some exception like Browser event -->
+
+    <script>
+
+        // document.getElementById('owl').onclick = function() {
+        //     alert("owl clicked")
+        // }
+        // This approch have less features or less scalable.
+
+        // document.getElementById('owl').addEventListener('click', function() {
+        //     alert("owl clicked again")
+        // })
+        // this is best approch for click event 
+
+        // we have to study these topics for event
+
+        // 1 type
+        // 2 timestamps
+        // 3 defaultPrevented
+        // 4 target
+        // 5 toElement
+        // 6 secElement
+        // 7 currentTarget
+        // 8 clientX, clientY, screenX, screenY
+        // 9 altkey, ctrlkey, shiftkey, keycode
+
+
+        document.getElementById('images').addEventListener('click', function(e) {
+            console.log("clicked inside the ul");
+        }, false)
+
+        document.getElementById('owl').addEventListener('click', function(e) {
+            console.log("owl clicked");
+            e.stopPropagation()
+        }, false)
+
+        // Event propagation are by default is false
+        // There are two types of event propagation
+        // 1.Event Bubling (false) -> mostly use
+        // 2.Event Capturing (true)
+
+        // Bubling -> Bottom to Top (code track form inside to outside)
+        // Capturing -> Top to Bottom (code track from outside to inside)
+
+        // If we want to seperate outer or inner from bubling we have to 
+        // stop bubling propagation  ->  (.stopPropagation)
+
+        document.getElementById('google').addEventListener('click',
+            function(e) {
+             e.preventDefault()
+             e.stopPropagation()
+             console.log("google clicked"); 
+            }, false
+        )
+        
+    </script>
+
+</html>
