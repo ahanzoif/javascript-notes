@@ -34,10 +34,16 @@
         // }
         // This approch have less features or less scalable.
 
+
+// *********************************************        
+
         // document.getElementById('owl').addEventListener('click', function() {
         //     alert("owl clicked again")
         // })
         // this is best approch for click event 
+
+        
+// *********************************************
 
         // we have to study these topics for event
 
@@ -52,14 +58,17 @@
         // 9 altkey, ctrlkey, shiftkey, keycode
 
 
-        document.getElementById('images').addEventListener('click', function(e) {
-            console.log("clicked inside the ul");
-        }, false)
+ // *********************************************
 
-        document.getElementById('owl').addEventListener('click', function(e) {
-            console.log("owl clicked");
-            e.stopPropagation()
-        }, false)
+
+        // document.getElementById('images').addEventListener('click', function(e) {
+        //     console.log("clicked inside the ul");
+        // }, false)
+
+        // document.getElementById('owl').addEventListener('click', function(e) {
+        //     console.log("owl clicked");
+        //     e.stopPropagation()
+        // }, false)
 
         // Event propagation are by default is false
         // There are two types of event propagation
@@ -72,13 +81,56 @@
         // If we want to seperate outer or inner from bubling we have to 
         // stop bubling propagation  ->  (.stopPropagation)
 
-        document.getElementById('google').addEventListener('click',
-            function(e) {
-             e.preventDefault()
-             e.stopPropagation()
-             console.log("google clicked"); 
-            }, false
-        )
+// *********************************************
+
+        // document.getElementById('google').addEventListener('click',
+        //     function(e) {
+        //      e.preventDefault()
+        //      e.stopPropagation()
+        //      console.log("google clicked"); 
+        //     }, false
+        // )
+
+
+// *********************************************
+
+        // for Remove image or anything from code
+
+        // Method 1
+
+        // document.querySelector('#images').addEventListener(
+        //     'click', function(e){
+        //         console.log(e.target.parentNode);
+        //         let removeImage = e.target.parentNode
+        //         removeImage.remove()
+        //     })
+
+        // Method 2
+
+        // document.querySelector('#images').addEventListener(
+        //     'click', function(e) {
+        //         console.log(e.target.parentNode)
+        //         let removeImage = e.target.parentNode
+        //         removeImage.parentNode.removeChild(removeImage)
+        //     }
+        // )
+
+        // in this 2 methods if we click on li(childNode)
+        // then it remove entier ul(parentNode) 
+
+ // *********************************************    
+ 
+        document.querySelector('#images').addEventListener
+        ('click', function(e){
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'IMG') {
+                console.log(e.target.id);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+        })
+           
+        
         
     </script>
 
