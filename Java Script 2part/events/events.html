@@ -30,16 +30,21 @@
     <script>
 
         // document.getElementById('owl').onclick = function() {
-        //     alert("owl clicked")
+        //     alert("owl click")
         // }
+        
         // This approch have less features or less scalable.
 
 
 // *********************************************        
 
-        // document.getElementById('owl').addEventListener('click', function() {
-        //     alert("owl clicked again")
-        // })
+        document.getElementById('owl').addEventListener(
+            'click',
+            function() {
+                alert("owl clicked")
+            }
+        )
+
         // this is best approch for click event 
 
         
@@ -120,15 +125,15 @@
 
  // *********************************************    
  
-        document.querySelector('#images').addEventListener
-        ('click', function(e){
-            console.log(e.target.tagName);
-            if (e.target.tagName === 'IMG') {
-                console.log(e.target.id);
-                let removeIt = e.target.parentNode
-                removeIt.remove()
-            }
-        })
+        // document.querySelector('#images').addEventListener
+        // ('click', function(e){
+        //     console.log(e.target.tagName);
+        //     if (e.target.tagName === 'IMG') {
+        //         console.log(e.target.id);
+        //         let removeIt = e.target.parentNode
+        //         removeIt.remove()
+        //     }
+        // })
            
         
         
