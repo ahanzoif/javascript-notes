@@ -38,12 +38,12 @@
 
 // *********************************************        
 
-        document.getElementById('owl').addEventListener(
-            'click',
-            function() {
-                alert("owl clicked")
-            }
-        )
+        // document.getElementById('owl').addEventListener(
+        //     'click',
+        //     function() {
+        //         alert("owl clicked")
+        //     }
+        // )
 
         // this is best approch for click event 
 
@@ -66,16 +66,30 @@
  // *********************************************
 
 
-        // document.getElementById('images').addEventListener('click', function(e) {
+        // document.getElementById('images').addEventListener(
+        //     'click', 
+        //     function(e) {
         //     console.log("clicked inside the ul");
+        //     alert("clicked inside the ul")
         // }, false)
 
-        // document.getElementById('owl').addEventListener('click', function(e) {
+        // document.getElementById('images').addEventListener(
+        //     'click',
+        //     function(e) {
+        //         console.log("clicked inside the ul");
+        //         alert('ul ko click kiya hai')
+        //     }, false
+        // )
+
+        // document.getElementById('owl').addEventListener(
+        //     'click', 
+        //     function(e) {
         //     console.log("owl clicked");
-        //     e.stopPropagation()
+        //     alert("owl clicked")
+        //     // e.stopPropagation()
         // }, false)
 
-        // Event propagation are by default is false
+        // Event propagation by default hamesha false hota hai
         // There are two types of event propagation
         // 1.Event Bubling (false) -> mostly use
         // 2.Event Capturing (true)
@@ -83,18 +97,26 @@
         // Bubling -> Bottom to Top (code track form inside to outside)
         // Capturing -> Top to Bottom (code track from outside to inside)
 
+        //.stopPropagation is used for both Bubbling as well as Capturing
+
         // If we want to seperate outer or inner from bubling we have to 
         // stop bubling propagation  ->  (.stopPropagation)
 
 // *********************************************
 
-        // document.getElementById('google').addEventListener('click',
-        //     function(e) {
-        //      e.preventDefault()
-        //      e.stopPropagation()
-        //      console.log("google clicked"); 
-        //     }, false
-        // )
+        document.getElementById('google').addEventListener('click',
+            function(e) {
+             e.preventDefault()
+             e.stopPropagation()
+             console.log("google clicked"); 
+            }, false
+        )
+
+        //.preventDefault is used to stop prevents the browser's default action
+        // mtlb jab hum .preventDefault use krege tb agr koi link ya kuch v
+        //event ke andar hai wo kaam nhi krega wo prevent ho jayega ruk jayega
+        //jab hum google pe click kr rhe hai tb google ka link work nhi kr rha hai
+        //kyun ki hamne usse prevent kr diya. 
 
 
 // *********************************************
