@@ -126,11 +126,14 @@
         // Method 1
 
         // document.querySelector('#images').addEventListener(
-        //     'click', function(e){
-        //         console.log(e.target.parentNode);
-        //         let removeImage = e.target.parentNode
-        //         removeImage.remove()
-        //     })
+        //     'click',
+        //     function(event) {
+        //         let remImg = event.target.parentNode
+        //         remImg.remove()
+        //     }
+        // )
+
+        
 
         // Method 2
 
@@ -141,6 +144,14 @@
         //         removeImage.parentNode.removeChild(removeImage)
         //     }
         // )
+
+        document.querySelector('#images').addEventListener(
+            'click',
+            function(event) {
+                let remImg = event.target.parentNode
+                remImg.parentNode.removeChild(remImg)
+            }
+        )
 
         // in this 2 methods if we click on li(childNode)
         // then it remove entier ul(parentNode) 
