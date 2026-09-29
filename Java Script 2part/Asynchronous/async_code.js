@@ -17,7 +17,7 @@
 
 // Blocking Code vs Non Blocking Code
 
-// Blocking Code vs Non Blocking Code Synchronous or Asynchronous Code hote hai.
+// Blocking Code vs Non Blocking Code both are Synchronous or Asynchronous Code hote hai.
 
 
 // Blocking Code --> ye program ko rok deta hai for example phone use krte waqt kisi ne khe diya fn bnd kro main tumhare liye pani lekr aata hun jab tk wo banda pani lekr nhi aayega tb tk main phone use nhi krskta 

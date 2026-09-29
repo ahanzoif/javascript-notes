@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Byte Buster</h1>
+    <button id="subscribe">Subscribe</button>
+</body>
+<script>
+    setTimeout(function() {
+        console.log("Md Kaif");
+    }, 3000)
+
+    // setTimeout() core JS language ka part nhi hai,
+    // isse browser ka Web API handle krta hai for example (JS V8 Engine)
+
+    // We use setTimeout() when we want to run some code after a specified amount of time.
+
+//*******************************************************//
+
+    // For example:
+
+    console.log("A");
+
+    setTimeout(() => {
+    console.log("B");
+    }, 2000);
+
+    console.log("C");
+
+    // Output:
+
+    // A
+    // C
+    // B
+
+    //setTimeout() schedules the function to run later; it doesn't block the rest of your JavaScript code. This is where the event loop becomes important.
+</script>
+</html>
