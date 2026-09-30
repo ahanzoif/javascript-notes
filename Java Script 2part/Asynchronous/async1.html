@@ -10,9 +10,38 @@
     <button id="subscribe">Subscribe</button>
 </body>
 <script>
-    setTimeout(function() {
-        console.log("Md Kaif");
-    }, 3000)
+
+    // setTimeout(function() {
+    //     console.log("Md Kaif");
+    // }, 3000)
+
+//*******************************************************//
+    // Reference lekr Timeout kr skte hai. 
+    
+    const sayKaif = function() {
+        console.log("Kaif")
+    }
+    //sayKaif is reference.
+    // setTimeout(sayKaif,2000)
+
+//*******************************************************//
+
+    const herName = function() {
+        console.log("Ashu");
+    }
+    setTimeout(herName,2000)
+    //Browser console pe 2 sec baad name dikhayega
+    
+    const fullName = function(){
+        document.querySelector('h1').
+        innerHTML = "Ashiya"
+        console.log("Ashiya")
+    }
+    setTimeout(fullName, 3000)
+    //Browser pe 3 sec pe update hoga saath hi saath html ke h1 tag ko 3 sec pe update kr dega.
+
+//*******************************************************//
+
 
     // setTimeout() core JS language ka part nhi hai,
     // isse browser ka Web API handle krta hai for example (JS V8 Engine)
@@ -23,14 +52,14 @@
 
     // For example:
 
-    console.log("A");
+    // console.log("A");
 
-    setTimeout(() => {
-    console.log("B");
-    }, 2000);
+    // setTimeout(() => {
+    // console.log("B");
+    // }, 2000);
 
-    console.log("C");
-
+    // console.log("C");
+ 
     // Output:
 
     // A
