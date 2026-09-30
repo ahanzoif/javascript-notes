@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>The Byte Buster</h1>
+    <h2>DSA</h2>
     <button id="subscribe">Subscribe</button>
 </body>
 <script>
@@ -74,6 +75,15 @@
     //Browser pe 3 sec pe update hoga saath hi saath html ke h1 tag ko 3 sec pe update kr dega.
 
 //*******************************************************//
+
+    // Clear Timeout
+
+    const changeName = function(){
+        document.querySelector('h2').
+        innerHTML = "DSA with CPP"
+    }
+    const changeMe = setTimeout(changeName,2000)
+    clearTimeout(changeMe)
 
 
 </script>
