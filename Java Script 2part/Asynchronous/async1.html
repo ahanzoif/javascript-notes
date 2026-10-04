@@ -68,8 +68,8 @@
     
     const fullName = function(){
         document.querySelector('h1').
-        innerHTML = "Ashiya"
-        console.log("Ashiya")
+        innerHTML = "Kaif"
+        console.log("Kaif")
     }
     setTimeout(fullName, 3000)
     //Browser pe 3 sec pe update hoga saath hi saath html ke h1 tag ko 3 sec pe update kr dega.
@@ -82,8 +82,21 @@
         document.querySelector('h2').
         innerHTML = "DSA with CPP"
     }
+
     const changeMe = setTimeout(changeName,2000)
-    clearTimeout(changeMe)
+    document.querySelector("#subscribe").
+    addEventListener("click", function() {
+        clearTimeout(changeMe)
+        console.log("Stopped")
+    })
+
+    //clearTimeout
+
+    //We use clearTimeout() to cancel a setTimeout() before it executes.
+
+    //Maine ek Alarm lagaya jo 5 sec baad bajega lekin 2 sec baad maine cancel kr diya 5 sec complete hone se phele to 5 sec hone pe alarm nhi bajega. clearTimeout() Timeout hone se phele lagate  hai.  
+
+//*******************************************************//
 
 
 </script>
