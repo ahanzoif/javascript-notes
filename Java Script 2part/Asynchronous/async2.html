@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <h1>The Byte Buster</h1>
+    <h2>DSA</h2>
+     <button id="like">Like</button>
+     <button id="comment">Comment</button>
+    <button id="subscribe">Subscribe</button>
+</body>
+<script>
+
+// 1st way to write setInterval()
+
+    setInterval(function(){
+        console.log("Kaif", Date.now())
+    },1000)
+
+//**************************************************************
+
+// 2nd way to write setInterval()
+
+// Is code mein 3rd parameter v pass kr rhe hai "Ashiya" 3rd parameter hai
+    
+    const sayName = function(str) {
+        console.log("Kaif", str, Date.now())
+    }
+    setInterval(sayName, 2000, "Ashiya")
+
+//****************************************************************
+
+// To stop setInterval() we use clearInterval()
+
+     
+
+</script>
+</html>
