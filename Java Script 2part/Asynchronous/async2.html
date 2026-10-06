@@ -18,7 +18,7 @@
 
     setInterval(function(){
         console.log("Kaif", Date.now())
-    },1000)
+    },3000)
 
 //**************************************************************
 
@@ -29,13 +29,15 @@
     const sayName = function(str) {
         console.log("Kaif", str, Date.now())
     }
-    setInterval(sayName, 2000, "Ashiya")
+    setInterval(sayName, 2000, "Dolly")
 
 //****************************************************************
 
 // To stop setInterval() we use clearInterval()
 
-     
+    const stopInterval = setInterval(sayName, 2000, "Ashiya")
+    clearInterval(stopInterval)
+    //clearInterval() setInterval() ko rok deta hai.
 
 </script>
 </html>
