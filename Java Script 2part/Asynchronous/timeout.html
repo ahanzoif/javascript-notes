@@ -22,7 +22,10 @@
       }, 2000);
     };
 
-    
+    const stop = function () {
+      console.log("Stop clicked");
+      clearTimeout(timeout);
+    };
 
     document.querySelector("#start").addEventListener("click", start);
 
