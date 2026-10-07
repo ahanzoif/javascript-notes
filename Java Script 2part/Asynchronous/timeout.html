@@ -11,26 +11,25 @@
     <button id="start">Start</button>
     <button id="stop">Stop</button>
   </body>
-  <script>
-    console.log("JavaScript loaded");
-    let timeout;
+<script>
+  console.log("JavaScript loaded");
 
-    const start = function () {
-      console.log("Start clicked");
-      timeout = setTimeout(function () {
-        console.log("Ashiya");
-      }, 2000);
-    };
+  let timeout;
 
-    const stop = function () {
-      console.log("Stop clicked");
-      clearTimeout(timeout);
-    };
+  const start = function () {
+    console.log("Start clicked");
 
-    document.querySelector("#start").addEventListener("click", start);
+    timeout = setTimeout(function () {
+      console.log("Ashiya");
+    }, 2000);
+  };
 
-    document.querySelector("#stop").addEventListener("click", function () {
-      clearTimeout(timeout);
-    });
-  </script>
+  const stop = function () {
+    console.log("Stop clicked");
+    clearTimeout(timeout);
+  };
+
+  document.querySelector("#start").addEventListener("click", start);
+  document.querySelector("#stop").addEventListener("click", stop);
+</script>
 </html>
