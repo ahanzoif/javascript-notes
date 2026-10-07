@@ -1,43 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-      <h1>The Byte Buster</h1>
+  </head>
+  <body>
+    <h1>The Byte Buster</h1>
     <h2>DSA</h2>
-     <button id="like">Like</button>
-     <button id="comment">Comment</button>
-    <button id="subscribe">Subscribe</button>
-</body>
-<script>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    console.log("JavaScript loaded");
+    let timeout;
 
-// 1st way to write setInterval()
+    const start = function () {
+      console.log("Start clicked");
+      timeout = setTimeout(function () {
+        console.log("Ashiya");
+      }, 2000);
+    };
 
-    setInterval(function(){
-        console.log("Kaif", Date.now())
-    },3000)
+    document.querySelector("#start").addEventListener("click", start);
 
-//**************************************************************
-
-// 2nd way to write setInterval()
-
-// Is code mein 3rd parameter v pass kr rhe hai "Ashiya" 3rd parameter hai
-    
-    const sayName = function(str) {
-        console.log("Kaif", str, Date.now())
-    }
-    setInterval(sayName, 2000, "Dolly")
-
-//****************************************************************
-
-// To stop setInterval() we use clearInterval()
-
-    const stopInterval = setInterval(sayName, 2000, "Ashiya")
-    clearInterval(stopInterval)
-    //clearInterval() setInterval() ko rok deta hai.
-
-</script>
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(timeout);
+    });
+  </script>
 </html>
