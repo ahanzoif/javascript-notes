@@ -67,4 +67,27 @@ promiseFour
   })
   .finally(() => {
     console.log("The promise is either resolved or rejected");
-  })
+  });
+
+//******************************************
+
+const promiseFive = new Promise((resolve, reject) => {
+  setTimeout(function () {
+    let error = true; //false;
+    if (!error) {
+      resolve({ language: "java script", platform: "YouTube" });
+    } else {
+      reject("ERROR: JS went wrong");
+    }
+  }, 9000);
+});
+
+async function consumePromiseFive() {
+  try {
+    const response = await promiseFive;
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+consumePromiseFive();
