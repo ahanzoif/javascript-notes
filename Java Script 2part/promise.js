@@ -1,9 +1,18 @@
-// 2 ways to write promise code
-// 1st way
+// Promise is an object in JS.
+// it have 3 stages
+// 1.pending
+// 2.fuilfilled
+// 3.rejected
+
+//response store in .then() -> resolve
+//error store in .catch() -> catch
+//.finally() store everything/always run
+
+//******************************************
 
 const promiseOne = new Promise(function (resolve, reject) {
   // Do an async task
-  // DB Calls, cryptograpgy, network
+  // DB Calls, cryptograpgy, network, etc.
 
   setTimeout(function () {
     console.log("Async task is complete");
@@ -16,7 +25,6 @@ promiseOne.then(function () {
 });
 
 //******************************************
-// 2nd way
 
 new Promise(function (resolve, reject) {
   setTimeout(function () {
@@ -27,7 +35,8 @@ new Promise(function (resolve, reject) {
   console.log("Async 2 is resolved");
 });
 
-// important -> we use .then() for resolve
+// important -> we use .then() for resolve.
+// we use .catch() for rejecet.
 
 //******************************************
 
@@ -61,7 +70,7 @@ promiseFour
   })
   .then((username) => {
     console.log(username);
-  })
+  }) //chaining (return the value of last .then())
   .catch(function (error) {
     console.log(error);
   })
@@ -91,3 +100,30 @@ async function consumePromiseFive() {
   }
 }
 consumePromiseFive();
+
+//******************************************
+
+async function getAllUsers() {
+  try {
+    const response = await fetch("https://api.github.com/users/ahanzoif");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log("E:", error);
+  }
+}
+getAllUsers();
+
+//******************************************
+fetch("https://api.github.com/users/ahanzoif")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => console.log(error));
+
+//******************************************
+
+//async wait krta hai work ko execute hone mein
