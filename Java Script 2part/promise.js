@@ -125,5 +125,4 @@ fetch("https://api.github.com/users/ahanzoif")
   .catch((error) => console.log(error));
 
 //******************************************
-
 //async wait krta hai work ko execute hone mein
