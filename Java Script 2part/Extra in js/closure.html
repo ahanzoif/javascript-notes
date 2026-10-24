@@ -5,39 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Closure</title>
   </head>
-  <body style="background-color: #313131"></body>
+  <body style="background-color: #313131">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+
   <script>
     // function init() {
+
     //   let name = "Mozilla";
     //   function displayName() {
     //     displayName();
     //     console.log(name);
     //   }
+
     //   displayName();
     // }
     // init();
 
-    function outer() {
-      let username = "kaif";
+    //*********************************************
 
-      function inner() {
-        let secret = "my123";
-        console.log("inner", username);
-      }
+    // function outer() {
+    //   let username = "kaif";
 
-      function innerTwo() {
-        console.log("innerTwo", username);
-        console.log(secret);
-      }
+    //   function inner() {
+    //     let secret = "my123";
+    //     console.log("inner", username);
+    //   }
 
-      inner();
-      innerTwo();
-    }
-    outer();
-    console.log("Too outer", username);
+    //   function innerTwo() {
+    //     console.log("innerTwo", username);
+    //     console.log(secret);
+    //   }
+
+    //   inner();
+    //   innerTwo();
+    // }
+    // outer();
+    // console.log("Too outer", username);
 
     //Function ke andar Function hoge un sbko outer/parent function ka access milta hai... Called Lexical Function.
 
     //Parent function ke properties access kr skte hai but ek child dusre child ke properties access nhi kr skta hai
+
+    //*********************************************
+
+    // function makeFunc() {
+
+    //   const name = "";
+    //   function displayName() {
+    //     console.log(name);
+    //   }
+
+    //   return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+  </script>
+
+  <script>
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = "Orange";
+    // };
+
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = "Green";
+    // };
+
+    function clickHandler(color) {
+      // document.body.style.backgroundColor = `${color}`
+
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange");
+
+    document.getElementById("green").onclick = clickHandler("green");
   </script>
 </html>
